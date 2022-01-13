@@ -1,0 +1,7 @@
+/* pages/mine/login/login.wxss */
+#getUserInfo {
+  padding: 0 !important;
+}
+#mainText {
+  margin: 40rpx 0;
+}

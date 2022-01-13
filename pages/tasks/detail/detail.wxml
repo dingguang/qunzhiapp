@@ -1,0 +1,115 @@
+<!--pages/tasks/detail/detail.wxml-->
+<view id="main">
+  <view>
+    <view class="t20">{{csTask.title}}</view>
+    <view class="gray t13">任务截止时间：{{csUserTask.expireTimeStr}}</view>
+    <view class="gray t13">任务报酬：{{csTask.reward}}元</view>
+    <view class="desciption">
+      <view>任务介绍</view>
+      <view class="content">
+        {{csTask.description}}
+      </view>
+      <view class="content">
+        {{csTask}}
+      </view>
+      <view>基本要求</view>
+      <!-- <view class="content">
+        {{csTask.requirement}}
+      </view>   -->
+      <!-- 将task改成了csTask -->
+      <view wx:if="{{csTask.id === 2}}">
+        <view>{{currQ.id + 1}}. {{currQ.content}}</view>
+        <view class="choice-group">
+          <view bindtap='continueChoose' data-val="{{true}}" data-idx="{{index}}" class="choice-btn">是</view>
+          <view bindtap='continueChoose' data-val="{{false}}" data-idx='{{index}}' class="choice-btn">否</view>
+        </view>
+        <view class="bold">诊所名称</view>
+        <view>
+          <input></input>
+        </view>
+        <view class="bold">诊所位置</view>
+        <view>
+          <input></input>
+        </view>
+      </view>
+      <view wx:else>
+        <view wx:if="{{displayQuestions.length === 0}}">已完成所有题目</view>
+        <view class="content" wx:for="{{displayQuestions}}" wx:key="{{index}}">
+          <view wx:if="{{!item.isRichText}}">
+            {{item.index}}. {{item.content}}
+          </view>
+          <view wx:else>
+            <rich-text nodes="{{item.richText}}"></rich-text>
+          </view>
+          <view class="table" wx:if="{{item.tableContent}}">
+            <view class="flex space-between">
+              <view class="td" wx:for-item="col" style="color: {{col.color}}; width: {{item.tableContent.width}}" wx:for='{{item.tableContent.cols}}' wx:key="*this">
+                {{col.name}}
+              </view>
+            </view>
+            <view class="tr flex space-between" wx:for-item="row" wx:for="{{item.tableContent.rows}}" wx:key="*this">
+              <view class="td" style="color: {{item.tableContent.cols[idx].color}}; width: {{item.tableContent.width}}" wx:for-index="idx" wx:for="{{row}}" wx:key="*this" wx:for-item="rowItem">{{rowItem}}</view>
+            </view>
+          </view>
+          <view wx:if="{{item.questionType === 'FILL_BLANK'}}">
+            <view>
+              <input data-id="{{item.id}}" data-idx="{{index}}" bindinput='onInputRes'></input>
+            </view>
+          </view>
+          <view wx:if="{{item.questionType === 'JUDGE'}}">
+            <view class="choice-group">
+              <view bindtap='doJudge' data-val="{{true}}" data-id="{{item.id}}" data-idx="{{index}}" class="choice-btn {{id2res[item.id] === true ? 'choice-btn-selected' : ''}}">是</view>
+              <view bindtap='doJudge' data-val="{{false}}" data-id="{{item.id}}" data-idx='{{index}}' class="choice-btn {{id2res[item.id] === false ? 'choice-btn-selected' : ''}}">否</view>
+            </view>
+            <!-- 判断在这里显示 -->
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{csTask.id === 1}}">
+        <view class="content">
+          <view>品智表：sys_province，备注名：城市表</view>
+          <view>字段：	fdi_areaid(id, 主键)、fdc_areaname(城市或省份)、fdi_parented(所属省份id)</view>
+          <view class="bold">品智实例</view>
+          <view>
+            <view>1	北京市	0</view>
+            <view>2	天津市	0</view>
+            <view>3	上海市	0</view>
+            <view>4	重庆市	0</view>
+          </view>
+        </view>
+        <view class="content">
+          <view>餐行健表：sys_city，备注名：城市</view>
+          <view>字段：id(城市ID, 主键)、cityid、name、provinceid、utime</view>
+          <view class="bold">餐行健实例</view>
+          <view>
+            <view>1	1100	天津市	12	2015-07-01 21:54:22</view>
+            <view>2	2210	沈阳市	21	2015-07-01 21:54:22</view>
+            <view>3	2220	大连市	21	2015-07-01 21:54:22</view>
+            <view>4	2230	鞍山市	21	2015-07-01 21:54:22</view>
+          </view>
+        </view>
+        <view>两张表是否是同一概念？</view> 
+        <view class="choice-group">
+          <view class="choice-btn">是</view>
+          <view class="choice-btn">否</view>
+        </view>
+      </view>
+      <view wx:if="{{csTask.id === 3}}">
+        <view>描述：</view>
+        <view>名称：中关村社区医院</view>
+        <view>地址：海淀路15号</view>
+        <view>是否存在这样一个诊所？</view> 
+        <view class="choice-group">
+          <view class="choice-btn">是</view>
+          <view class="choice-btn">否</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="flex space-between">
+    <view bindtap="goToLast" class="button">上一题</view>
+    <view wx:if="{{allDisplay}}" bindtap="submit" class="button">提 交</view>
+    <view wx:else bindtap="goToNext" class="button">下一题</view>
+  </view>
+</view>

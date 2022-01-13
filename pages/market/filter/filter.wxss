@@ -1,0 +1,4 @@
+/* pages/market/filter/filter.wxss */
+.filter-group {
+  margin-bottom: 40rpx;
+}

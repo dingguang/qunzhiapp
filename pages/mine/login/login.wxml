@@ -1,0 +1,10 @@
+<!--pages/mine/login/login.wxml-->
+<view id="main">
+  <view class="title">
+    I3city群智助手
+  </view>
+  <view id="mainText">
+    <view>完成群智任务，轻松赚取积分</view>
+  </view>
+  <button id="getUserInfo" open-type='getUserInfo' bindgetuserinfo='onGetUserInfo' class="button">登录</button>
+</view>

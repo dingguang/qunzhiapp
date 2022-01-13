@@ -1,0 +1,27 @@
+<!--pages/tasks/index/index.wxml-->
+<view id="main">
+  <view class='title'>我的任务</view>
+  <view class='flex space-around switch-bar'>
+    <view wx:for="{{status}}" wx:key="value" bindtap="chooseStatus" data-status="{{item.value}}" class="{{currStatus === item.value ? 'selected' : ''}}">{{item.label}}
+    </view>
+  </view>
+  <view wx:if="{{taskList.length > 0}}">
+    <view class="card task-card" bindtap='goToDetail' data-id='{{item.id}}' wx:for='{{taskList}}' wx:key='id'>
+      <view class="t13 gray">{{item.csTask.assigner}}发布了任务 · {{item.createTimeStr}}</view>
+      <view class="t17 q-title">
+        {{item.csTask.title}}
+      </view>
+      <view>
+        <view>{{item.csTask.description}}</view>
+      </view>
+      <view class="t13 gray">
+        报酬：{{item.csTask.reward}}元
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="tc gray t13">
+      暂无此状态的任务
+    </view>
+  </view>
+</view>

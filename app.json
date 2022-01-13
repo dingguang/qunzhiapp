@@ -1,14 +1,45 @@
 {
-  "pages":[
+  "pages": [
+    "pages/market/index/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/mine/index/index",
+    "pages/tasks/index/index",
+    "pages/market/detail/detail",
+    "pages/tasks/detail/detail",
+    "pages/mine/user-info/user-info",
+    "pages/market/filter/filter",
+    "pages/mine/login/login"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "#333333",
+    "list": [
+      {
+        "iconPath": "assets/img/market.png",
+        "selectedIconPath": "assets/img/market_selected.png",
+        "pagePath": "pages/market/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "assets/img/task.png",
+        "selectedIconPath": "assets/img/task_selected.png",
+        "pagePath": "pages/tasks/index/index",
+        "text": "任务"
+      },
+      {
+        "iconPath": "assets/img/mine.png",
+        "selectedIconPath": "assets/img/mine_selected.png",
+        "pagePath": "pages/mine/index/index",
+        "text": "我的"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

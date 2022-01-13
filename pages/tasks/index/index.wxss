@@ -1,0 +1,11 @@
+/* pages/tasks/index/index.wxss */
+.task-card {
+  margin: 20rpx 0;
+  padding: 20rpx;
+}
+.q-title {
+  margin: 10rpx 0;
+}
+.switch-bar > view {
+  width: 33.3%;
+}

@@ -1,0 +1,31 @@
+<!--pages/market/filter/filter.wxml-->
+<view id="main">
+  <view class="title">
+    筛选任务
+  </view>
+  <view class="filter-group">
+    <view class="subtitle">
+      任务类别
+    </view>
+    <view class="choice-group">
+      <view class="choice-btn" wx:for="{{taskType}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+  <view class="filter-group">
+    <view class="subtitle">
+      任务领域
+    </view>
+    <view class="choice-group">
+      <view class="choice-btn" wx:for="{{domains}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+  <view class="filter-group">
+    <view class="subtitle">
+      任务地点
+    </view>
+    <view class="choice-group">
+      <view class="choice-btn" wx:for="{{places}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+  <view bindtap="confirmFilter" class='button'>确 认</view>
+</view>

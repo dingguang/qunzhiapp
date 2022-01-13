@@ -1,0 +1,4 @@
+/* pages/market/detail/detail.wxss */
+.desciption {
+  margin: 20rpx 0;
+}

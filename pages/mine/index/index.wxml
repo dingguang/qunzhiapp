@@ -1,0 +1,41 @@
+<!--pages/mine/index/index.wxml-->
+<view id="main">
+  <view class="tc">
+    <view class="avatar">
+      <open-data type='userAvatarUrl'></open-data>
+    </view>
+    <view class="username">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+  <view>
+    <view class="card flex space-between" id="scoreBanner">
+      <view class="tc">
+        <view>我的积分</view>
+        <view>{{user.score}}</view>
+      </view>
+      <view class="tc">
+        <view>待完成</view>
+        <view>{{doingCount}}</view>
+      </view>
+      <view class="tc">
+        <view>已完成</view>
+        <view>{{finishCount}}</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view bindtap='goToInfo1' class='flex space-between v-center menu-line'>
+      <view>消息中心</view>
+      <image class="icon" src="/assets/img/right.png"></image>
+    </view>
+    <view bindtap='goToInfo' class='flex space-between v-center menu-line'>
+      <view>个人信息</view>
+      <image class="icon" src="/assets/img/right.png"></image>      
+    </view>
+    <!-- <view bindtap='goToInfo2' class='flex space-between v-center menu-line'>
+      <view>test</view>
+      <image class="icon" src="/assets/img/right.png"></image>      
+    </view> -->
+  </view>
+</view>

@@ -8,3 +8,102 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+view {
+  color: #333333;
+  font-size: 28rpx;
+}
+.tc {
+  text-align: center;
+}
+.bold {
+  font-weight: 500;
+}
+.card {
+  box-shadow: 5rpx 5rpx 24rpx -5rpx rgba(0, 0, 0, 0.25);
+  border-radius: 10rpx;
+}
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.v-center {
+  align-items: center;
+}
+.gray {
+  color: #888888;
+}
+.t13 {
+  font-size: 26rpx;
+}
+.t14 {
+  font-size: 28rpx;
+}
+.t17 {
+  font-size: 34rpx;
+}
+.t18 {
+  font-size: 36rpx;
+}
+.t20 {
+  font-size: 40rpx;
+}
+.title {
+  font-size: 60rpx;
+  font-weight: 500;
+}
+.subtitle {
+  font-size: 36rpx;
+  font-weight: 500;
+}
+#main {
+  padding: 0 40rpx;
+}
+.icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+.button {
+  padding: 20rpx;
+  background: linear-gradient(90deg, #292929 2%, #434343 97%);
+  color: #fff;
+  border-radius: 6rpx;
+  text-align: center;
+  box-shadow: 5rpx 5rpx 24rpx -5rpx rgba(0, 0, 0, 0.85);
+}
+.switch-bar {
+  margin: 10rpx 0;
+  border-top: 1rpx solid #aaaaaa;
+}
+.switch-bar > view {
+  padding: 10rpx 0;
+  text-align: center;
+  border-bottom: 1rpx solid #aaaaaa;
+}
+.switch-bar .selected {
+  border-bottom: 4rpx solid #333333;
+}
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.choice-btn {
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #333333;
+  margin: 20rpx 20rpx 0 0;
+  border-radius: 10rpx;
+}
+.choice-btn-selected {
+  color: #fff;
+  background: #333333;
+  border: 1rpx solid #333333;
+}
+.content {
+  background: #eeeeee;
+  padding: 20rpx;
+  margin: 20rpx 0 40rpx 0;
+}

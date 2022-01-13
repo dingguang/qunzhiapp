@@ -1,0 +1,28 @@
+<!--pages/market/index/index.wxml-->
+<view id="main">
+  <view class='title'>任务市场</view>
+  <view class='flex space-around switch-bar'>
+    <view wx:for="{{status}}" wx:key="value" 
+    bindtap="chooseStatus" data-status="{{item.value}}" class="{{currStatus === item.value ? 'selected' : ''}}">{{item.label}}</view>
+  </view>
+  <view>
+    <view class="tc" wx:if="{{taskList.length === 0}}">
+      暂时没有更多任务~
+    </view>
+    <view class="card task-card" bindtap='goToDetail' data-id='{{item.id}}' wx:for='{{taskList}}' wx:key='id'>
+      <view class="t13 gray">{{item.assigner}}发布了任务 · {{item.createTimeStr}}</view>
+      <view class="t17 q-title">
+        {{item.title}}
+      </view>
+      <view>
+        <view>{{item.description}}</view>
+      </view>
+      <view class="t13 gray">
+        剩余：{{item.totalCount}}个
+      </view>
+    </view>
+  </view>
+  <view bindtap='goToFilter' wx:if="{{currStatus === 'All'}}" class="filter card">
+    <image class="icon" src='/assets/img/filter.png'></image>
+  </view>
+</view>

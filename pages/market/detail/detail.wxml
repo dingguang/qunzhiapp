@@ -1,0 +1,17 @@
+<!--pages/market/detail/detail.wxml-->
+<view id="main">
+  <view>
+    <view class="t20">{{task.title}}</view>
+    <view class="gray t13">任务剩余数量：{{task.totalCount}}个</view>
+    <view class="gray t13">{{task.assigner}}发布了任务 · {{task.createTimeStr}}</view>
+    <view class="desciption">
+      <view class="bold">任务介绍</view>
+      <view class="content">{{task.description}}</view>
+      <view class="bold">报酬细则</view>
+      <view class="content">{{task.reward}}元</view>
+      <view class="bold">基本要求</view>
+      <view class="content">{{task.requirement}}</view>
+    </view>
+  </view>
+  <view class="button" bindtap='goToFinish'>我要完成</view>
+</view>

@@ -1,0 +1,31 @@
+/* pages/mine/index/index.wxss */
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx auto 0 auto;
+  border-radius: 75rpx;
+  overflow: hidden;
+}
+.username {
+  font-size: 40rpx;
+  font-weight: 500;
+  margin: 10rpx auto 20rpx auto;
+}
+#scoreBanner {
+  /* width: 600rpx; */
+  padding: 20rpx;
+  margin: 20rpx auto;
+}
+#scoreBanner > view {
+  width: 33%;
+}
+#scoreBanner > view:not(:last-child) {
+  border-right: 1rpx solid #aaaaaa;
+}
+
+.menu-line {
+  border-bottom: 1rpx solid #aaaaaa;
+  height: 100rpx;
+  /* margin: 0 50rpx; */
+  padding: 0 20rpx;
+}

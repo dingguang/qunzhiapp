@@ -1,0 +1,23 @@
+/* pages/market/index/index.wxss */
+.task-card {
+  margin: 20rpx 0;
+  padding: 20rpx;
+}
+.q-title {
+  margin: 10rpx 0;
+}
+.switch-bar > view {
+  width: 50%;
+}
+.filter {
+  position: fixed;
+  right: 100rpx;
+  bottom: 100rpx;
+  background: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+}

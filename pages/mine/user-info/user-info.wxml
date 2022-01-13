@@ -1,0 +1,33 @@
+<!--pages/mine/user-info/user-info.wxml-->
+<view id='main'>
+  <view class="title">
+    个人信息
+  </view>
+  <view>
+    <view class="subtitle">基本信息</view>
+    <view class="label">性别</view>
+    <input></input>
+    <view class="label">手机号</view>
+    <input></input>
+    <view class="label">邮箱</view>
+    <input></input>
+  </view>
+  <view>
+    <view class="subtitle">专业信息</view>
+    <view class="label">学历</view>
+    <input></input>
+    <view class="label">专业</view>
+    <input></input>
+    <view class="label">职业</view>
+    <input></input>
+  </view>
+  <view>
+    <view class="subtitle">技能能力</view>
+    <view class="label">领域</view>
+    <view class="choice-group">
+      <view class="choice-btn" wx:for="{{interest}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+  <view class="button" wx:if="modify">编 辑</view>
+  <view class="button" wx:else>确 定</view>
+</view>

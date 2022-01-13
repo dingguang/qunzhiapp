@@ -1,0 +1,14 @@
+/* pages/mine/user-info/user-info.wxss */
+input {
+  border-bottom: 1rpx solid #888;
+}
+.subtitle {
+  margin-top: 40rpx;
+}
+.label {
+  font-weight: 500;
+  margin-top: 20rpx;
+}
+.button {
+  margin: 40rpx auto;
+}
